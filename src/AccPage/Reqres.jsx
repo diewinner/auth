@@ -4,7 +4,6 @@ import { useTable } from 'react-table';
 
 
 
-
 class Reqres extends Component {
     constructor(props) {
         super(props);
