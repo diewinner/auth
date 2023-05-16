@@ -1,0 +1,26 @@
+.btn_logout {
+    width: 75px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #000000 !important;
+    border-radius: 18px;
+    border: 0px inset #46f1f3;
+    background: #fd4f4f;
+
+}
+.btn_logout:hover {
+    background: linear-gradient(to top, #eff1f1, #f12b2b);
+  }
+.wrapper_accpage {
+    width: 50%;
+    margin: 0 auto;
+    -webkit-box-shadow: 13px 15px 13px -5px rgba(48, 145, 219, 0.6);
+    -moz-box-shadow: 13px 15px 13px -5px rgba(48, 145, 219, 0.6);
+    box-shadow: 13px 15px 13px -5px rgba(48, 145, 219, 0.6);
+}
+form {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 7px;
+    padding-bottom: 7px;
+}
