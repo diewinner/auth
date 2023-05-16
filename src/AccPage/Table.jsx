@@ -6,7 +6,7 @@ import { useTable,useSortBy } from 'react-table';
 
 function Table (props) {
     const {user} = props;
-    const data = React.useMemo(() => [{user}], [])
+    const data = React.useMemo(() => [{user}], [])/// ???
     
       const columns = React.useMemo(
         () => [
