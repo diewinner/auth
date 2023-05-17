@@ -1,12 +1,37 @@
 import React from "react";
 import { useState } from "react";
 import { useTable,useSortBy } from 'react-table';
-
-
+import '../style/Table.scss'
+// React.useMemo(() => [{user}], [])
 
 function Table (props) {
-    const {user} = props;
-    const data = React.useMemo(() => [{user}], [])/// ???
+     const {user} = props;
+    const setUsers = {user};
+     const data = React.useMemo(
+      () => [
+        {
+          first_name: 'Максим',
+          last_name: 'Бочилов', 
+        },
+        {
+          first_name: 'Иван',
+          last_name: 'Иванов',
+        },
+        {
+          first_name: 'Андрей',
+          last_name: 'Казаков',
+        },
+        {
+          first_name: 'Владимир',
+          last_name: 'Кушаков',
+        },
+        {
+          first_name: 'Артур',
+          last_name: 'Криков',
+        }
+      ],
+      []
+    ) /// ???
     
       const columns = React.useMemo(
         () => [
@@ -39,7 +64,8 @@ function Table (props) {
               {headerGroup.headers.map(column => (
                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                   {column.render('Header')}
-                  <span>
+                  <span 
+                  >
                     {column.isSorted
                       ? column.isSortedDesc
                         ? ' 🔽'
