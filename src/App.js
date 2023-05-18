@@ -2,10 +2,9 @@ import './App.css';
 import { useState } from 'react';
 import {LogPage} from './LogInPage/LogPage';
 import {AccPage} from './AccPage/AccPage';
-import {Route,Routes, Link} from 'react-router-dom'
+import {Route,Routes} from 'react-router-dom'
 
 function App() {
-
   const [isLoggedIn,setIsLoggedIn] = useState(false);
   const [login,setLogin] = useState('')
   const [password,setPassword] = useState('')

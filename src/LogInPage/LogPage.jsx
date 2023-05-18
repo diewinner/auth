@@ -4,18 +4,12 @@ import "../style/LogInPage.scss"
 function LogPage(props) {
     let navigate = useNavigate();
 
-    
     function handlerLogIn(event) {
         event.preventDefault();
         props.setIsLoggedIn(true);
         navigate('/login');
     }
-    function handleChangeLogin (event) {
-        props.setLogin(event.target.value)
-    }
-    function handleChangePassword (event) {
-        props.setPassword(event.target.value)
-    }
+
     function loginHandler (e) {
         const admin = /admin/
         props.setLogin(e.target.value);
@@ -25,13 +19,8 @@ function LogPage(props) {
     function passwordHandler (e) {
         const admin = /admin/
         props.setPassword(e.target.value);
-        if (admin.test(String(e.target.value).toLowerCase())) {
-            
-            props.setPasswordError('')
-        } else {
-            props.setPasswordError('Введи admin')
+        admin.test(String(e.target.value).toLowerCase()) ? props.setPasswordError('') :  props.setPasswordError('Введи admin')
         }
-    }
     function onBlurHandler (e) {
      e.target.name === 'login' ? props.setLoginDirty(true) : props.setPasswordDirty(true)
     }
@@ -43,7 +32,6 @@ function LogPage(props) {
             props.setFormValid(true)
         }
     })
-
 
     return <div className="wrapper">
         <h1 className="header_text">Авторизация</h1>
